@@ -27,31 +27,31 @@
         combo_esc {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <40 41>;
+            key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
         combo_minus {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <26 27>;
+            key-positions = <16 17>;
             bindings = <&kp MINUS>;
         };
         combo_under {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <27 28>;
+            key-positions = <17 18>;
             bindings = <&kp UNDER>;
         };
         combo_colon {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <37 38>;
+            key-positions = 27 28>;
             bindings = <&kp COLON>;
         };
         combo_semi {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <38 39>;
+            key-positions = <28 29>;
             bindings = <&kp SEMI>;
         };
     };
@@ -70,7 +70,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z     &ht LGUI X  &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &ht LCTRL TAB   &ht LSHFT SPACE &lt 1 BSPC  &lt 2 RET
+                                          &ht LSHFT SPACE &ht LCTRL TAB &lt 2 RET &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -87,7 +87,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &trans      &kp N4     &kp N5     &kp N6     &trans          &trans    &kp EQUAL  &kp LT     &kp GT     &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &ht LCTRL RET  &ht LSHFT N0        &trans     &trans
+                                          &ht LSHFT N0 &ht LCTRL RET  &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
