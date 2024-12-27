@@ -20,6 +20,16 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        hp: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+
     };
 
     combos {
@@ -45,7 +55,7 @@
         combo_colon {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = 27 28>;
+            key-positions = <27 28>;
             bindings = <&kp COLON>;
         };
         combo_semi {
@@ -70,7 +80,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z     &ht LGUI X  &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &ht LSHFT SPACE &ht LCTRL TAB &lt 2 RET &lt 1 BSPC
+                                          &hp LSHFT SPACE &hp LCTRL TAB &lt 2 RET &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -87,7 +97,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &trans      &kp N4     &kp N5     &kp N6     &trans          &trans    &kp EQUAL  &kp LT     &kp GT     &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &ht LSHFT N0 &ht LCTRL RET  &trans     &trans
+                                          &hp LSHFT N0 &hp LCTRL RET  &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
