@@ -55,13 +55,13 @@
         combo_colon {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <27 28>;
+            key-positions = <26 27>;
             bindings = <&kp COLON>;
         };
         combo_semi {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <28 29>;
+            key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
     };
