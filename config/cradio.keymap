@@ -152,7 +152,7 @@
             &kp EXCL   &kp F1     &kp F2     &kp F3     &kp F10        &kp ASTRK  &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &kp F4     &kp F5     &kp F6     &kp F1   0     &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &trans     &kp F4     &kp F5     &kp F6     &kp F1         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp DEL   &kp PSCRN         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
