@@ -124,7 +124,7 @@
             HRML(A,        R,         S,         T)     &kp G          &kp M      HRMR(N,        E,         I,        O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , (      │ . )      │ / ?      │
-'            &lt 2 Z     &ht LGUI X  &kp C      &kpmmd     &kpmmv         &kp K      &kp H      &kpmmCO   &kpmmDO     &kp FSLH
+            &lt 2 Z     &ht LGUI X  &kp C      &kpmmd     &kpmmv         &kp K      &kp H      &kpmmCO   &kpmmDO     &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                         &hp LSHFT SPACE &hp LCTRL TAB  &lp 2 RET &lp 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
