@@ -40,23 +40,27 @@
         };
         kpmmd: mod_morph_d {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp D>, <&kp V>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         kpmmv: mod_morph_v {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp V>, <&kp D>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         kpmmCO: mod_morph_comma {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         kpmmDO: mod_morph_dot {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
