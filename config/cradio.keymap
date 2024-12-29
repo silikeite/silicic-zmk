@@ -154,7 +154,7 @@
         combo_gam {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <0 1 2 11 12 13>;
+            key-positions = <1 2 3 11 12 13>;
             bindings = <&tog_on 2>;
         };
         combo_def {
@@ -264,7 +264,7 @@
             &kp GRAVE  &kp N7     &kp N8     &kp N9     &trans          &trans    &kp PLUS   &kp LBKT   &kp RBKT   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  1       │  2       │  3       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &trans  &kpET LALT 0 &ht LSFT N5 &ht LCTL N6 &trans        &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+            &trans  &kpET LALT 0 &ht LSFT N2 &ht LCTL N3 &trans        &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  4       │  5       │ 6        │          │   │          │ = +      │ <        │ >        │ \ |      │
             &trans     &kp N4     &kp N5     &kp N6     &trans          &trans    &kp EQUAL  &kp LT     &kp GT     &kp BSLH
