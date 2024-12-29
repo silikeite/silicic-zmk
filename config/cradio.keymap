@@ -141,13 +141,19 @@
 
         combo_gam {
             timeout-ms = <50>;
-            layers = <0 2>;
+            layers = <0>;
             key-positions = <11 2 13>;
             bindings = <&to 2>;
         };
         combo_def {
             timeout-ms = <50>;
-            layers = <0 2>;
+            layers = <2>;
+            key-positions = <11 12 13>;
+            bindings = <&to 0>;
+        };
+        combo_def_null {
+            timeout-ms = <50>;
+            layers = <0>;
             key-positions = <11 12 13>;
             bindings = <&to 0>;
         };
@@ -214,7 +220,7 @@
         combo_gam_M {
             timeout-ms = <50>;
             layers = <2>;
-            key-positions = <25 30 31>;
+            key-positions = <25 30>;
             bindings = <&hp 6 M>;
         };
 
@@ -274,7 +280,7 @@
         //│  LCTL    │  Z       │  X       │  C       │  V       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LCTL   &kp Z      &kp X      &kp C      &kp V          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE &lp 5 TAB        &kp RET   &kp BSPC
+                                             &kp SPACE &lp 3 TAB        &kp RET   &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -291,7 +297,7 @@
         //│  LCTL    │  4       │  5       │  6       │  - _     │   │  N       │  MUTE    │  VOLD    │  VOLU    │          │
             &kp LCTL   &kp N2     &kp N5     &kp N6     &kp MINUS      &kp N     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lp 5 SPACE &trans      &kp KP_ENTER &kp BSPC
+                                             &trans     &trans      &kp KP_ENTER &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -308,7 +314,7 @@
         //│  LCTL    │  / ?     │  . >     │  , <     │  M       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LCTL   &kp FSLH   &kp DOT    &kp COMMA  &kp M          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE  &trans        &kp RET   &kp BSPC
+                                             &trans     &trans        &kp RET   &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
