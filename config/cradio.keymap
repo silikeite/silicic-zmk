@@ -39,6 +39,18 @@
             quick-tap-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
         kpmmd: mod_morph_d {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -142,26 +154,14 @@
         combo_gam {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <11 2 13>;
-            bindings = <&tog 2>;
+            key-positions = <0 1 2 11 12 13>;
+            bindings = <&tog_on 2>;
         };
         combo_def {
             timeout-ms = <50>;
             layers = <2>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 2>;
-        };
-        combo_def_null {
-            timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <11 12 13>;
-            bindings = <&none>;
-        };
-        combo_gam_null {
-            timeout-ms = <50>;
-            layers = <2>;
-            key-positions = <11 2 13>;
-            bindings = <&none>;
+            key-positions = <11 12 13 21 22 23>;
+            bindings = <&tog_off 2>;
         };
         combo_gam_T {
             timeout-ms = <50>;
@@ -233,7 +233,7 @@
 
         combo_reset {
             timeout-ms = <50>;
-            key-positions = <0 1 2 3 30 31>;
+            key-positions = <0 1 2 3 10 11 12 13>;
             bindings = <&bootloader>;
         };
     };
