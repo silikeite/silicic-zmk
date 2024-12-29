@@ -1,19 +1,18 @@
-// Copyright (c) 2022 The ZMK Contributors
+// silicic-zmk cradio (sweep) keymap.
+// (c) 2024 `silikeite`.
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// Home row mods macro
-#define HRML(k1,k2,k3,k4) &lt 1 k1 &ht LALT k2 &ht LSHFT k3 &ht LCTRL k4
+// Home row mods macro.
+#define HRML(k1, k2, k3) &ht LALT k1 &ht LSHFT k2 &ht LCTRL k3
 #define HRMR(k1,k2,k3) &ht RCTRL k1 &ht RSHFT k2 &ht RALT k3
-
-// Version for second/third rows.
-#define HRML2(k1, k2, k3) &ht LALT k1 &ht LSHFT k2 &ht LCTRL k3
 
 / {
     behaviors {
+        // General convenience behaviors
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -51,6 +50,8 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
+
+        // Mod morph sets.
         kpmmd: mod_morph_d {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -77,6 +78,9 @@
             bindings = <&kp DOT>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // Mod-morph for SHIFT+NUM+R = TILDE is complicated
+        // as it is both a mod-morph *and* a home-row mod.
         kpmmET: mod_morph_one {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -96,13 +100,15 @@
 
     combos {
         compatible = "zmk,combos";
+        
+        // Normal mode combos.
         combo_esc {
             timeout-ms = <50>;
             layers = <0>;
             key-positions = <30 31>;
             bindings = <&hp LS(LCTRL) ESC>;
         };
-        combo_kpret {
+        combo_kpret { // Note: maybe use keypad return for this?
             timeout-ms = <50>;
             layers = <1>;
             key-positions = <30 31>;
@@ -151,18 +157,22 @@
             bindings = <&kp EXCL>;
         };
 
+        // Switch between normal mode and gaming mode.
         combo_def {
             timeout-ms = <50>;
             layers = <2>;
-            key-positions = <20 21 22>;
+            key-positions = <21 22 23>;
             bindings = <&tog 2>;
         };
         combo_gam {
             timeout-ms = <50>;
             layers = <0>;
-            key-positions = <0 1 2>;
+            key-positions = <1 2 3>;
             bindings = <&tog 2>;
         };
+
+        // Gaming mode combos. 
+        // Mainly X3/X4 combos for middle keys.
         combo_gam_T {
             timeout-ms = <50>;
             layers = <2>;
@@ -172,7 +182,10 @@
         combo_gam_G {
             timeout-ms = <50>;
             layers = <2>;
-            key-positions = <4 14>;
+            // Use a vertical combo to avoid 50ms latency on D key
+            // Important when playing Osu!
+            // Top one is more easily reachable during gameplay.
+            key-positions = <4 14>; 
             bindings = <&kp G>;
         };
         combo_gam_B {
@@ -217,7 +230,6 @@
             key-positions = <23 24>;
             bindings = <&kp RBRC>;
         };
-
         combo_gam_esc {
             timeout-ms = <50>;
             layers = <2>;
@@ -238,15 +250,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ' "     │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SQT
+            &lt 5 Q    &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
-            HRML(A,        R,         S,         T)     &kp G          &kp M      HRMR(N,        E,         I)     &kp O
+            &lt 1 A    HRML(R         S,         T)     &kp G          &kp M      HRMR(N,        E,         I)     &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , (      │ . )      │ / ?      │
             &lt 5 Z    &ht LGUI X &kp C      &kpmmd     &kpmmv         &kp K      &kp H      &kpmmCO   &kpmmDO     &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &hp LSHFT SPACE &hp LCTRL TAB  &lp 5 RET &lp 1 BSPC
+                                        &hp LSHFT SPACE &hp LCTRL TAB  &lp 5 RET  &lp 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -258,7 +270,7 @@
             &kp GRAVE  &kp N7     &kp N8     &kp N9     &trans          &trans    &kp PLUS   &kp LBKT   &kp RBKT   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  1       │  2       │  3       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &trans  &kpET LALT 0 &ht LSFT N2 &ht LCTL N3 &trans        &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+            &trans  &kpET LALT 0 &ht LSFT N2 &ht LCTL N3 &trans        &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  4       │  5       │ 6        │          │   │          │ = +      │ <        │ >        │ \ |      │
             &trans     &kp N4     &kp N5     &kp N6     &trans          &trans    &kp EQUAL  &kp LT     &kp GT     &kp BSLH
@@ -322,11 +334,11 @@
         fn_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ B1BL     │  F7      │  F8      │  F9      │  F12     │   │  ^       │  (       │  )       │  ]       │  B2BL    │
-           &bootloader &kp F7     &kp F8     &kp F9     &kp F12        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &bootloader
+        //│ B1BL     │  F7      │  F8      │  F9      │  F12     │   │ BCLR     │  B1      │  B2      │  B3      │  B2BL    │
+           &bootloader &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F1      │  F2      │  F3      │  F10     │   │          │  HOME    │  PGDN    │  PGUP    │  END     │
-            &trans     HRML2(F1,   F2,        F3)       &kp F10        &kp ASTRK  &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
+        //│          │  F1      │  F2      │  F3      │  F10     │   │ B/U      │  HOME    │  PGDN    │  PGUP    │  END     │
+            &trans     HRML2(F1,   F2,        F3)       &kp F10      &out OUT_TOG &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F4      │  F5      │  F6      │  F11     │   │          │  MUTE    │  VOLD    │  VOLU    │          │
             &trans     &kp F4     &kp F5     &kp F6     &kp F11        &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
@@ -339,14 +351,14 @@
         gfnc_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ B1BL     │  F7      │  F8      │  F9      │  F12     │   │  ^       │  (       │  )       │  ]       │  B2BL    │
-         &ht LALT DEL  &kp F7     &kp F8     &kp F9     &kp F12        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &bootloader
+        //│ DEL      │  F7      │  F8      │  F9      │  F12     │   │ BCLR     │  B1      │  B2      │  B3      │  B2BL    │
+         &ht LALT DEL  &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F1      │  F2      │  F3      │  F10     │   │          │  HOME    │  PGDN    │  PGUP    │  END     │
-        &ht LSFT PSCRN &kp F1     &kp F2     &kp F3     &kp F10        &kp ASTRK  &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
+        //│ PSCRN    │  F1      │  F2      │  F3      │  F10     │   │ B/U      │  HOME    │  PGDN    │  PGUP    │  END     │
+        &ht LSFT PSCRN &kp F1     &kp F2     &kp F3     &kp F10      &out OUT_TOG &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F4      │  F5      │  F6      │  F11     │   │          │  MUTE    │  VOLD    │  VOLU    │          │
-         &ht LCTL F11  &kp F4     &kp F5     &kp F6     &kp F11        &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
+        //│ F11      │  F4      │  F5      │  F6      │          │   │          │  MUTE    │  VOLD    │  VOLU    │          │
+         &ht LCTL F11  &kp F4     &kp F5     &kp F6     &trans         &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                         &hp LSHFT PSCRN &hp LCTRL DEL  &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
