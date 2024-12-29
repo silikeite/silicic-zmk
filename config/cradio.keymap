@@ -153,15 +153,8 @@
 
         combo_gam {
             timeout-ms = <50>;
-            layers = <0>;
-            key-positions = <1 2 3 11 12 13>;
-            bindings = <&tog_on 2>;
-        };
-        combo_def {
-            timeout-ms = <50>;
-            layers = <2>;
-            key-positions = <11 12 13 21 22 23>;
-            bindings = <&tog_off 2>;
+            key-positions = <11 2 13>;
+            bindings = <&tog 2>;
         };
         combo_gam_T {
             timeout-ms = <50>;
@@ -233,7 +226,7 @@
 
         combo_reset {
             timeout-ms = <50>;
-            key-positions = <0 1 2 3 10 11 12 13>;
+            key-positions = <20 21 22>;
             bindings = <&bootloader>;
         };
     };
