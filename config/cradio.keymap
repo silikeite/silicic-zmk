@@ -253,7 +253,7 @@
             &lt 5 Q    &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
-            &lt 1 A    HRML(R         S,         T)     &kp G          &kp M      HRMR(N,        E,         I)     &kp O
+            &lt 1 A    HRML(R,        S,         T)     &kp G          &kp M      HRMR(N,        E,         I)     &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , (      │ . )      │ / ?      │
             &lt 5 Z    &ht LGUI X &kp C      &kpmmd     &kpmmv         &kp K      &kp H      &kpmmCO   &kpmmDO     &kp FSLH
