@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        }
+        };
         kpET: hold_tap_one {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -79,7 +79,7 @@
             quick-tap-ms = <100>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kpmmET>;
-        }
+        };
     };
 
     combos {
@@ -107,7 +107,7 @@
             layers = <0>;
             key-positions = <12 13>;
             bindings = <&ht LS(LCTRL) TAB>;
-        }
+        };
         combo_minus {
             timeout-ms = <50>;
             layers = <0>;
@@ -210,13 +210,20 @@
             layers = <2>;
             key-positions = <30 31>;
             bindings = <&lp 4 ESC>;
-        }
+        };
         combo_gam_M {
             timeout-ms = <50>;
             layers = <2>;
             key-positions = <25 30 31>;
             bindings = <&hp 6 M>;
-        }
+        };
+
+        combo_reset {
+            timeout-ms = <50>;
+            layers = <2>;
+            key-positions = <0 1 2 3 30 31>;
+            bindings = <&bootloader>;
+        };
     };
 
     keymap {
