@@ -149,13 +149,13 @@
             timeout-ms = <50>;
             layers = <2>;
             key-positions = <11 12 13>;
-            bindings = <&to 0>;
+            bindings = <&tog 2>;
         };
         combo_def_null {
             timeout-ms = <50>;
             layers = <0>;
             key-positions = <11 12 13>;
-            bindings = <&to 0>;
+            bindings = <&none>;
         };
         combo_gam_T {
             timeout-ms = <50>;
@@ -169,23 +169,29 @@
             key-positions = <13 14>;
             bindings = <&kp G>;
         };
+        combo_gam_B {
+            timeout-ms = <50>;
+            layers = <2>;
+            key-positions = <23 24>;
+            bindings = <&kp B>;
+        };
         combo_gam_Y {
             timeout-ms = <50>;
             layers = <4>;
-            key-positions = <23 24>;
-            bindings = <&kp B>;
+            key-positions = <3 4>;
+            bindings = <&kp Y>;
         };
         combo_gam_H {
             timeout-ms = <50>;
             layers = <4>;
-            key-positions = <3 4>;
-            bindings = <&kp T>;
+            key-positions = <13 14>;
+            bindings = <&kp H>;
         };
         combo_gam_N {
             timeout-ms = <50>;
             layers = <4>;
-            key-positions = <13 14>;
-            bindings = <&kp G>;
+            key-positions = <23 24>;
+            bindings = <&kp N>;
         };
         combo_gam_LBRC {
             timeout-ms = <50>;
@@ -205,12 +211,7 @@
             key-positions = <23 24>;
             bindings = <&kp RBRC>;
         };
-        combo_gam_B {
-            timeout-ms = <50>;
-            layers = <2>;
-            key-positions = <23 24>;
-            bindings = <&kp B>;
-        };
+
         combo_gam_esc {
             timeout-ms = <50>;
             layers = <2>;
@@ -220,7 +221,7 @@
         combo_gam_M {
             timeout-ms = <50>;
             layers = <2>;
-            key-positions = <25 30>;
+            key-positions = <24 30>;
             bindings = <&hp 6 M>;
         };
 
