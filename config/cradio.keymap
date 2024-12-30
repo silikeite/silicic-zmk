@@ -165,6 +165,12 @@
             key-positions = <21 22 23>;
             bindings = <&tog 2>;
         };
+        combo_def_null{
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <21 22 23>;
+            bindings = <&none>;
+        }
         combo_gam {
             timeout-ms = <20>;
             layers = <0>;
