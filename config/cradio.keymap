@@ -164,6 +164,45 @@
             bindings = <&kp EXCL>;
         };
 
+        // Vertical combos
+        combo_left {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <16 26>;
+            bindings = <&kp LEFT>;
+        };
+        combo_down {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <17 27>;
+            bindings = <&kp DOWN>;
+        };
+        combo_up {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <18 28>;
+            bindings = <&kp UP>;
+        };
+        combo_right {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <19 29>;
+            bindings = <&kp RIGHT>;
+        };
+
+        combo_lbrc {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <7 17>;
+            bindings = <&kp LBRC>;
+        };
+        combo_rbrc {
+            timeout-ms = <20>;
+            layers = <0>;
+            key-positions = <8 18>;
+            bindings = <&kp RBRC>;
+        };
+
         // Switch between normal mode and gaming mode.
         combo_def {
             timeout-ms = <20>;
