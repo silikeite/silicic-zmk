@@ -168,38 +168,38 @@
         combo_left {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <16 26>;
+            key-positions = <6 16>;
             bindings = <&kp LEFT>;
         };
         combo_down {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <17 27>;
+            key-positions = <7 17>;
             bindings = <&kp DOWN>;
         };
         combo_up {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <18 28>;
+            key-positions = <8 18>;
             bindings = <&kp UP>;
         };
         combo_right {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <19 29>;
+            key-positions = <9 19>;
             bindings = <&kp RIGHT>;
         };
 
         combo_lbrc {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <7 17>;
+            key-positions = <17 27>;
             bindings = <&kp LBRC>;
         };
         combo_rbrc {
             timeout-ms = <20>;
             layers = <0>;
-            key-positions = <8 18>;
+            key-positions = <18 28>;
             bindings = <&kp RBRC>;
         };
 
