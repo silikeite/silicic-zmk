@@ -190,6 +190,12 @@
             bindings = <&kp RIGHT>;
         };
 
+        combo_eql {
+            timeout-ms = <50>;
+            layers = <0>;
+            key-positions = <16 26>;
+            bindings = <&kp EQUAL>;
+        };
         combo_lbrc {
             timeout-ms = <50>;
             layers = <0>;
