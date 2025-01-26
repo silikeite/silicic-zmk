@@ -104,61 +104,61 @@
         
         // Normal mode combos.
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <30 31>;
             bindings = <&hp LS(LCTRL) ESC>;
         };
         combo_kpret { // Note: maybe use keypad return for this?
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <1>;
             key-positions = <30 31>;
             bindings = <&ht LS(LCTRL) RET>;
         };
         combo_app {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <32 33>;
             bindings = <&ht LS(LCTRL) K_APP>;
         };
         combo_bspc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <18 19>;
             bindings = <&kp BSPC>;
         };
         combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <12 13>;
             bindings = <&ht LS(LCTRL) TAB>;
         };
         combo_minus {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <16 17>;
             bindings = <&kp MINUS>;
         };
         combo_under {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <17 18>;
             bindings = <&kp UNDER>;
         };
         combo_colon {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <26 27>;
             bindings = <&kp COLON>;
         };
         combo_semi {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
         combo_excl {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <28 29>;
             bindings = <&kp EXCL>;
@@ -166,44 +166,44 @@
 
         // Vertical combos
         combo_left {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <6 16>;
             bindings = <&kp LEFT>;
         };
         combo_down {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <7 17>;
             bindings = <&kp DOWN>;
         };
         combo_up {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <8 18>;
             bindings = <&kp UP>;
         };
         combo_right {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <9 19>;
             bindings = <&kp RIGHT>;
         };
 
         combo_eql {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <16 26>;
             bindings = <&kp EQUAL>;
         };
         combo_lbrc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <17 27>;
             bindings = <&kp LBRC>;
         };
         combo_rbrc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <18 28>;
             bindings = <&kp RBRC>;
@@ -211,19 +211,19 @@
 
         // Switch between normal mode and gaming mode.
         combo_def {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             key-positions = <21 22 23>;
             bindings = <&tog 2>;
         };
         combo_def_null{
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <21 22 23>;
             bindings = <&none>;
         };
         combo_gam {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
             key-positions = <11 2 13>;
             bindings = <&tog 2>;
@@ -232,13 +232,13 @@
         // Gaming mode combos. 
         // Mainly X3/X4 combos for middle keys.
         combo_gam_T {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             key-positions = <3 4>;
             bindings = <&kp T>;
         };
         combo_gam_G {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             // Use a vertical combo to avoid 50ms latency on D key
             // Important when playing Osu!
@@ -247,55 +247,55 @@
             bindings = <&kp G>;
         };
         combo_gam_B {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             key-positions = <23 24>;
             bindings = <&kp B>;
         };
         combo_gam_Y {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <4>;
             key-positions = <3 4>;
             bindings = <&kp Y>;
         };
         combo_gam_H {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <4>;
             key-positions = <13 14>;
             bindings = <&kp H>;
         };
         combo_gam_N {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <4>;
             key-positions = <23 24>;
             bindings = <&kp N>;
         };
         combo_gam_LBRC {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <3>;
             key-positions = <3 4>;
             bindings = <&kp LBRC>;
         };
         combo_gam_KPENT {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <3>;
             key-positions = <13 14>;
             bindings = <&kp KP_ENTER>;
         };
         combo_gam_RBRC {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <3>;
             key-positions = <23 24>;
             bindings = <&kp RBRC>;
         };
         combo_gam_esc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             key-positions = <30 31>;
             bindings = <&lp 4 ESC>;
         };
         combo_gam_M {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <2>;
             key-positions = <24 30>;
             bindings = <&lp 6 M>;
@@ -392,14 +392,14 @@
         fn_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ B1BL     │  F7      │  F8      │  F9      │  F12     │   │ BCLR     │  B1      │  B2      │  B3      │  B2BL    │
-           &bootloader &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
+        //│ F12      │  F7      │  F8      │  F9      │  F12     │   │ BCLR     │  B1      │  B2      │  B3      │  B2BL    │
+            &kp F12     &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F1      │  F2      │  F3      │  F10     │   │ B/U      │  HOME    │  PGDN    │  PGUP    │  END     │
-            &trans     HRML(F1,    F2,        F3)       &kp F10      &out OUT_TOG &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
+        //│ F10      │  F1      │  F2      │  F3      │  F10     │   │ B/U      │  HOME    │  PGDN    │  PGUP    │  END     │
+            &kp F10     HRML(F1,    F2,        F3)       &kp F10      &out OUT_TOG &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  F4      │  F5      │  F6      │  F11     │   │          │  MUTE    │  VOLD    │  VOLU    │          │
-            &trans     &kp F4     &kp F5     &kp F6     &kp F11        &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
+        //│ F11      │  F4      │e  F5      │  F6      │  F11     │   │          │  MUTE    │  VOLD    │  VOLU    │          │
+            &kp F11    &kp F4     &kp F5     &kp F6     &kp F11        &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                         &hp LSHFT PSCRN &hp LCTRL DEL  &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
