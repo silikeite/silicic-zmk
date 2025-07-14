@@ -405,7 +405,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ F12      │  F7      │  F8      │  F9      │  F12     │   │ BCLR     │  B1      │  B2      │  B3      │  B2BL    │
-            &kp F12     &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
+            &bootloader &kp F7     &kp F8     &kp F9     &kp F12      &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ F10      │  F1      │  F2      │  F3      │  F10     │   │ B/U      │  HOME    │  PGDN    │  PGUP    │  END     │
             &kp F10     HRML(F1,    F2,        F3)       &kp F10      &out OUT_TOG &kp HOME  &kp PG_DN  &kp PG_UP   &kp END
