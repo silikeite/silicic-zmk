@@ -29,6 +29,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
         lp: layer_tap_hold_preferred {
@@ -37,6 +38,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
         tog_on: toggle_layer_on_only {
@@ -165,49 +167,49 @@
         };
 
         // Vertical combos
-        combo_left {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <6 16>;
-            bindings = <&kp LEFT>;
-        };
-        combo_down {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <7 17>;
-            bindings = <&kp DOWN>;
-        };
-        combo_up {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <8 18>;
-            bindings = <&kp UP>;
-        };
-        combo_right {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <9 19>;
-            bindings = <&kp RIGHT>;
-        };
+        // combo_left {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <6 16>;
+        //     bindings = <&kp LEFT>;
+        // };
+        // combo_down {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <7 17>;
+        //     bindings = <&kp DOWN>;
+        // };
+        // combo_up {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <8 18>;
+        //     bindings = <&kp UP>;
+        // };
+        // combo_right {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <9 19>;
+        //     bindings = <&kp RIGHT>;
+        // };
 
-        combo_eql {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <16 26>;
-            bindings = <&kp EQUAL>;
-        };
-        combo_lbrc {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <17 27>;
-            bindings = <&kp LBRC>;
-        };
-        combo_rbrc {
-            timeout-ms = <20>;
-            layers = <0>;
-            key-positions = <18 28>;
-            bindings = <&kp RBRC>;
-        };
+        // combo_eql {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <16 26>;
+        //     bindings = <&kp EQUAL>;
+        // };
+        // combo_lbrc {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <17 27>;
+        //     bindings = <&kp LBRC>;
+        // };
+        // combo_rbrc {
+        //     timeout-ms = <20>;
+        //     layers = <0>;
+        //     key-positions = <18 28>;
+        //     bindings = <&kp RBRC>;
+        // };
 
         // Switch between normal mode and gaming mode.
         combo_def {
@@ -365,7 +367,7 @@
             &kp LSFT   &kp N1     &kp N2     &kp N3     &kp N0         &kp H      &kp J      &kp K      &kp L      &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  LCTL    │  4       │  5       │  6       │  - _     │   │  N       │  MUTE    │  VOLD    │  VOLU    │          │
-            &kp LCTL   &kp N2     &kp N5     &kp N6     &kp MINUS      &kp N     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
+            &kp LCTL   &kp N4     &kp N5     &kp N6     &kp MINUS      &kp N     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans      &kp KP_ENTER &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
