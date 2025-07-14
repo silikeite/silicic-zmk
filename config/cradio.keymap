@@ -109,60 +109,70 @@
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <30 31>;
+            require-prior-idle-ms = <100>;
             bindings = <&hp LS(LCTRL) ESC>;
         };
         combo_kpret { // Note: maybe use keypad return for this?
             timeout-ms = <20>;
             layers = <1>;
             key-positions = <30 31>;
+            require-prior-idle-ms = <100>;
             bindings = <&ht LS(LCTRL) RET>;
         };
         combo_app {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <32 33>;
+            require-prior-idle-ms = <100>;
             bindings = <&ht LS(LCTRL) K_APP>;
         };
         combo_bspc {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <18 19>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp BSPC>;
         };
         combo_tab {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <12 13>;
+            require-prior-idle-ms = <100>;
             bindings = <&ht LS(LCTRL) TAB>;
         };
         combo_minus {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <16 17>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp MINUS>;
         };
         combo_under {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp UNDER>;
         };
         combo_colon {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <26 27>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp COLON>;
         };
         combo_semi {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp SEMI>;
         };
         combo_excl {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <28 29>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp EXCL>;
         };
 
@@ -216,18 +226,21 @@
             timeout-ms = <20>;
             layers = <2>;
             key-positions = <21 22 23>;
+            require-prior-idle-ms = <100>;
             bindings = <&tog 2>;
         };
         combo_def_null{
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <21 22 23>;
+            require-prior-idle-ms = <100>;
             bindings = <&none>;
         };
         combo_gam {
             timeout-ms = <20>;
             layers = <0>;
             key-positions = <11 2 13>;
+            require-prior-idle-ms = <100>;
             bindings = <&tog 2>;
         };
 
